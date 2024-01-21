@@ -3,7 +3,7 @@ import {GiShieldBash} from "../../Assets/Icons"
 const Header = () => {
   return (
     <div>
-      <div className="navbar ">
+      <div className="navbar backdrop-filter backdrop-blur-lg border-b border-gray-200 bg-opacity-30 ">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
