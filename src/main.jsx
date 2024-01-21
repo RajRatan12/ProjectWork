@@ -4,11 +4,7 @@ import './index.css'
 import Layout from './Layout.jsx'
 import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } from 'react-router-dom'
 
-import {Home,About,Services} from "./components/index.jsx"
-import FooterAbout from "./components/FooterComponents/FooterAbout.jsx"
-import FooterContact from "./components/FooterComponents/FooterContact.jsx"
-import FooterKnowTheTeam  from "./components/FooterComponents/FooterKnowTheTeam.jsx"
-import FooterReference from './components/FooterComponents/FooterAbout.jsx'
+import {Home,About,Services,FooterAbout,FooterContact,FooterKnowTheTeam,FooterReference} from "./components/index.jsx"
 
 const router=createBrowserRouter(
   createRoutesFromElements(
