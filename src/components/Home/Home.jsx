@@ -1,6 +1,7 @@
 // import React from 'react'
 import Landing_Page1 from '../../Assets/Landing_Page1.jpg'
-import Landing_Page2 from '../../Assets/Landing_Page2.jpg'
+// import Landing_Page2 from '../../Assets/Landing_Page2.jpg'
+import pexels from "../../Assets/pexels-eberhard-grossgasteiger-1292115.jpg"
 import {data} from "../Data/Data"
 
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
 
 
     <div className=" w-[100%] h-screen flex-col flex justify-center mx-auto max-w-full overflow-y-scroll bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" 
-      style={{ backgroundImage: `url(${Landing_Page2})`  }}>
+      style={{ backgroundImage: `url(${pexels})`  }}>
 
 <div className=" grid sm:grid-cols-2 md:grid-cols-4 m-auto gap-x-5 gap-y-5 mt-8">
         {data.map((item, index) => (
