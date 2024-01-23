@@ -1,4 +1,5 @@
 // import React from 'react'
+import Button from "../Buttons/Button"
 import {GiShieldBash} from "../../Assets/Icons"
 const Header = () => {
   return (
@@ -25,11 +26,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Btn implement</a>
-        </div>
-      </div>
-    </div>
-    
+        <Button/>
+          </div>
+          </div>
+          </div>
   )
 }
 
