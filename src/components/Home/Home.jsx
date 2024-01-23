@@ -9,7 +9,7 @@ const Home = () => {
 
 
       <div className=' ml-[3%]  p-10 text-black m-auto md:w-[700px] '>
-          <p className='Rajdhani font-bold text-5xl'>Welcome to ThreatSenseAI</p>
+          <p className='Rajdhani font-bold text-3xl'>Welcome to ThreatSenseAI</p>
           <p className='p-2 Rajdhani'>ahjkhsoiajsdjnasdlhlais dasbx ak hxku asugxukxgasg b</p>
       </div>
     </div>
