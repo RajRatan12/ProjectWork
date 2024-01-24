@@ -1,3 +1,3 @@
 import { GiShieldBash } from "react-icons/gi";
-
-export {GiShieldBash}
+import { IoCloseCircleSharp } from "react-icons/io5";
+export {GiShieldBash,IoCloseCircleSharp}
