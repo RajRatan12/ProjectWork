@@ -39,8 +39,8 @@ function Home() {
     }
   }
   return (
-    <div>
-    <div className=" w-[100%] h-screen flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" 
+    <div className="">
+    <div className=" w-[100%] h-screen flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg " 
       style={{ backgroundImage: `url(${Landing_Page1})`  }}>
 
 
