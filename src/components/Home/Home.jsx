@@ -51,7 +51,7 @@ function Home() {
     </div>
 
 
-    <div className=" w-[100%] h-screen flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" 
+    <div className=" w-[100%]  flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" 
       style={{ backgroundImage: `url(${pexels})`  }}>
 
     <div className="grid sm:grid-cols-2 md:grid-cols-4 m-auto gap-x-5 gap-y-5 mt-8">
