@@ -1,9 +1,9 @@
-import React from "react";
+// import {useState,useRef,useEffect} from "react";
 import { FaMapSigns } from "react-icons/fa";
 import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
-import Landing_Page1 from '../../Assets/Landing_Page1.jpg'
-const footerContact = () => {
+
+function FooterContact  () {
   const formTab = [{ name: "" }, { name: "" }, { name: "" }, { name: "" }];
   const contactTab = [
     {
@@ -30,8 +30,8 @@ const footerContact = () => {
   return (
     <>
       <div>
-        <div className=" w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" >
-          <div className="flex justify-center sm:mt-[10%] md:mt-[6%] xs:mt-[20%]">
+        <div className=" w-[100%] flex-col flex  mx-auto max-w-full bg-cover  bg-center bg-no-repeat " >
+          <div className="flex justify-center sm:mt-[10%] md:mt-[8%] xs:mt-[20%]">
             <p className="font-Rajdhani text-3xl font-bold">Contact Me</p>
           </div>
       {/* Cards */}
@@ -39,7 +39,7 @@ const footerContact = () => {
           <div className="flex gap-5 justify-center flex-wrap h-auto lg:flex-nowrap ">
             {contactTab.map((x, index) => {
               return (
-                <div key={index} className="card w-full  shadow-xl h-auto backdrop ">
+                <div key={index} className="card w-full  shadow-xl h-auto  ">
                   <div className="card-body items-center flex-grow-0  text-center">
                     <h2 className="card-title">{x.icon}</h2>
                     <p className="text-lg font-bold my-3">{x.title}</p>
@@ -52,9 +52,8 @@ const footerContact = () => {
             })}
           </div>
         </div>
-
         </div>
-        <div className=" w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg" >
+        <div className={` w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg`} >
       <div className=" container mx-auto  flex flex-wrap shadow-2xl my-20 rounded-md p-5">
         <div className="lg:w-1/2 w-full p-4">
           <form className="  shadow-md rounded-lg px-2 pt-6 pb-8 mb-4">
@@ -85,7 +84,7 @@ const footerContact = () => {
           <div className="relative aspect-w-16 h-[50vw] lg:h-full aspect-h-9">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/place/Kalinga+Institute+of+Medical+Sciences+(KIMS)/@20.3555968,85.8042593,15z/data=!4m6!3m5!1s0x3a19092289cbfcef:0x26d133989a910e1a!8m2!3d20.3519291!4d85.8133651!16s%2Fm%2F02vrfb2?entry=ttu"
               allowFullScreen
               loading="lazy"
             ></iframe>
@@ -93,10 +92,9 @@ const footerContact = () => {
         </div>
       </div>
       </div>
-      </div>
-        
+      </div> 
     </>
-  );
-};
+  )
+}
 
-export default footerContact;
+export default FooterContact;
