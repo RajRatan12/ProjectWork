@@ -1,0 +1,11 @@
+{
+  "name": "minor-project-backend",
+  "version": "1.0.0",
+  "description": "Working on the Backend of the Minor Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Debangshu Saha, Raj Ratan",
+  "license": "ISC"
+}
