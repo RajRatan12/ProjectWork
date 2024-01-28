@@ -1,10 +1,55 @@
 // import {useState,useRef,useEffect} from "react";
+import {useState} from "react";
 import { FaMapSigns } from "react-icons/fa";
 import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
 
-function FooterContact  () {
-  const formTab = [{ name: "" }, { name: "" }, { name: "" }, { name: "" }];
+const FooterContact =()=>{
+
+  const [name,setName]=useState("");
+  const [email,setEmail]=useState("");
+  const [message,setMessage]=useState("");
+
+  const NameChangeHandler=(e)=>{
+    const value=e.target.value;
+    setName(value);
+    // console.log(name);
+  }
+
+  const EmailChangeHandler=(e)=>{
+    const value=e.target.value;
+    setEmail(value);
+    // console.log(email)
+  }
+
+  const MessageChangeHandler=(e)=>{
+    const value=e.target.value;
+    setMessage(value);
+    // console.log(message)
+  }
+  const formTab = [
+    { 
+      title:"Name",
+      placeholder:"Enter Your name",
+      type:"text",
+      Name: "", 
+      onChange:NameChangeHandler
+    },
+    { 
+      title:"Email",
+      placeholder:"Enter Your Email-ID",
+      type:"text",
+      Email: "" ,
+      onChange:EmailChangeHandler
+    }, 
+    { 
+      title:"Message",
+      placeholder:"Enter Your Message",
+      type:"textarea",
+      Message: "" ,
+      onChange:MessageChangeHandler
+    }
+  ];
   const contactTab = [
     {
       icon: <FaMapSigns className="text-4xl" />,
@@ -27,6 +72,7 @@ function FooterContact  () {
       desription: "yoursite.com",
     },
   ];
+
   return (
     <>
       <div>
@@ -56,22 +102,33 @@ function FooterContact  () {
         <div className={` w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg`} >
       <div className=" container mx-auto  flex flex-wrap shadow-2xl my-20 rounded-md p-5">
         <div className="lg:w-1/2 w-full p-4">
-          <form className="  shadow-md rounded-lg px-2 pt-6 pb-8 mb-4">
+          <form className="  shadow-lg rounded-md px-2 pt-6 pb-8 mb-4">
             <div className="flex  flex-col">
               {formTab.map((x, index) => {
                 return (
                   <div key={index} className="mx-auto form-control w-full">
                     <label className="label">
-                      <span className="label-text">What is your name?</span>
+                      <span className="label-text">{x.title}</span>
                     </label>
-                    <input
-                      type="text"
-                      placeholder="Type here"
-                      className="input input-bordered w-full  "
+                    {x.type === "textarea" ? (
+                      <textarea
+                      rows="10"
+                      cols="50"
+                      placeholder={x.placeholder}
+                      className="input input-bordered w-full p-2"
+                      onChange={x.onChange}
                     />
-                  </div>
-                );
-              })}
+                    ):(
+                      <input
+                      type={x.type}
+                      placeholder={x.placeholder}
+                      className="input input-bordered w-full  p-2"
+                      onChange={x.onChange}
+                      />
+                      )}
+                      </div>
+                    );
+                  })}
               <div className="w-full my-4 flex justify-end ">
                 <button className="btn rounded-full w-full">
                   Send Message
@@ -82,12 +139,13 @@ function FooterContact  () {
         </div>
         <div className="lg:w-1/2 w-full   p-4">
           <div className="relative aspect-w-16 h-[50vw] lg:h-full aspect-h-9">
-            <iframe
-              className="absolute inset-0 w-full h-full"
-              src="https://www.google.com/maps/place/Kalinga+Institute+of+Medical+Sciences+(KIMS)/@20.3555968,85.8042593,15z/data=!4m6!3m5!1s0x3a19092289cbfcef:0x26d133989a910e1a!8m2!3d20.3519291!4d85.8133651!16s%2Fm%2F02vrfb2?entry=ttu"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+             <iframe 
+              className="absolute rounded-md inset-0 w-full h-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.6626320403816!2d85.81352567469679!3d20.355551210561252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19091813dab8d5%3A0xa033051ccddbbcbc!2sKalinga%20Institute%20of%20Industrial%20Technology!5e0!3m2!1sen!2sin!4v1706421593896!5m2!1sen!2sin" 
+              width="800" 
+              height="600" 
+              loading="lazy">
+            </iframe>
           </div>
         </div>
       </div>
