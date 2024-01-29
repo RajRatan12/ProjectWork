@@ -76,8 +76,8 @@ const FooterContact =()=>{
   return (
     <>
       <div>
-        <div className=" w-[100%] flex-col flex  mx-auto max-w-full bg-cover  bg-center bg-no-repeat " >
-          <div className="flex justify-center sm:mt-[10%] md:mt-[8%] xs:mt-[20%]">
+        <div className=" w-[100%] flex-col flex  mx-auto max-w-full bg-cover  bg-center bg-no-repeat ">
+          <div className="flex justify-center sm:mt-[10%] md:mt-[8%] xs:mt-[20%] animate-jump-in">
             <p className="font-Rajdhani text-3xl font-bold">Contact Me</p>
           </div>
       {/* Cards */}
