@@ -1,9 +1,11 @@
+import Raj from "../../Assets/Raj.jpeg"
+import Rohan from "../../Assets/IMG_9640.jpeg"
 export const ProfileCardData = [
     {
       id: 1,
       name: "Debangshu Saha",
-      description: "",
-      image:"",
+      description: "cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut",
+      image:Rohan,
       twitter:"",
       linkedin:"",
       github:"",
@@ -12,8 +14,8 @@ export const ProfileCardData = [
     {
       id: 2,
       name: "Raj Ratan",
-      description: "",
-      image:"",
+      description: "cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut",
+      image:Rohan,
       twitter:"",
       linkedin:"",
       github:"",
@@ -22,8 +24,8 @@ export const ProfileCardData = [
     {
       id: 3,
       name: "Unnati Singh",
-      description: "",
-      image:"",
+      description: "cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut",
+      image:Rohan,
       twitter:"",
       linkedin:"",
       github:"",
@@ -32,8 +34,8 @@ export const ProfileCardData = [
     {
       id: 4,
       name: "Rohan Ganguly",
-      description: "",
-      image:"",
+      description: "cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut",
+      image:Rohan,
       twitter:"",
       linkedin:"",
       github:"",
@@ -42,8 +44,8 @@ export const ProfileCardData = [
     {
         id: 5,
         name: "Harshit Singhania",
-        description: "",
-        image:"",
+        description: "cras pulvinar mattis nunc sed blandit libero volutpat sed cras ornare arcu dui vivamus arcu felis bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut",
+        image:Rohan,
         twitter:"",
         linkedin:"",
         github:"",
