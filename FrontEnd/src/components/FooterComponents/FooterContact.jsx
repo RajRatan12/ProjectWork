@@ -54,22 +54,22 @@ const FooterContact =()=>{
     {
       icon: <FaMapSigns className="text-4xl" />,
       title: "Address",
-      desription: `198 West 21th Street, Suite 721 New York NY 10016`,
+      desription: `KIIT University, Bhubaneswar, Odisha, India`,
     },
     {
       icon: <BsFillTelephoneFill className="text-4xl" />,
       title: "Contact Number",
-      desription: `+ 1235 2355 98`,
+      desription: `+91 7782037428`,
     },
     {
       icon: <FaPaperPlane className="text-4xl" />,
       title: "Email Address",
-      desription: `info@yoursite.com`,
+      desription: `sahdebsaha909@gmail.com`,
     },
     {
       icon: <BsGlobeAmericas className="text-4xl" />,
       title: "Website",
-      desription: "yoursite.com",
+      desription: <a href="/">Home</a>,
     },
   ];
 
@@ -77,8 +77,8 @@ const FooterContact =()=>{
     <>
       <div>
         <div className=" w-[100%] flex-col flex  mx-auto max-w-full bg-cover  bg-center bg-no-repeat ">
-          <div className="flex justify-center sm:mt-[10%] md:mt-[8%] xs:mt-[20%] animate-jump-in">
-            <p className="font-Rajdhani text-3xl font-bold">Contact Me</p>
+          <div className="flex justify-center sm:mt-[10%] md:mt-[8%] xs:mt-[20%]">
+            <p className="font-Rajdhani text-5xl font-bold">Contact Me</p>
           </div>
       {/* Cards */}
         <div className="container mx-auto mt-[10%]">
