@@ -12,6 +12,11 @@ export default {
       fontFamily: {
         Rajdhani: ["Rajdhani"],
       },
+      colors:{
+        twitterColor:"#1DA1F2",
+        githubColor:"#2b3137",
+        linkedinColor:"#0A66C2",
+      }
     },
     screens: {
       xs: "320px",
