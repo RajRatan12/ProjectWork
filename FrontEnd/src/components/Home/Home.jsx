@@ -1,20 +1,19 @@
 // import React from 'react'
-import {useState,useRef,useEffect} from "react"
-import Landing_Page1 from '../../Assets/Landing_Page1.jpg'
+import { useState, useRef, useEffect } from "react";
+import Landing_Page1 from "../../Assets/Landing_Page1.jpg";
 // import Landing_Page2 from '../../Assets/Landing_Page2.jpg'
-import pexels from "../../Assets/pexels-eberhard-grossgasteiger-1292115.jpg"
-import {data} from "../Data/Data"
-import {IoCloseCircleSharp} from "../../Assets/Icons"
+import pexels from "../../Assets/pexels-eberhard-grossgasteiger-1292115.jpg";
+import { data } from "../Data/Data";
+import { IoCloseCircleSharp } from "../../Assets/Icons";
 
 export function useIsVisible(ref) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(([entry]) => {
-        setIntersecting(entry.isIntersecting)
-    },
-    );
-    
+      setIntersecting(entry.isIntersecting);
+    });
+
     observer.observe(ref.current);
     return () => {
       observer.disconnect();
@@ -26,7 +25,7 @@ export function useIsVisible(ref) {
 
 function Home() {
   const refs = Array.from({ length: 4 }, () => useRef());
-  const isVisible = refs.map(ref => useIsVisible(ref));
+  const isVisible = refs.map((ref) => useIsVisible(ref));
   const [fade, setFade] = useState(false);
 
   const onBringGlassInfront = () => {
@@ -39,11 +38,14 @@ function Home() {
         className=" w-[100%] h-screen flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg "
         style={{ backgroundImage: `url(${Landing_Page1})` }}
       >
-              <div className=' ml-[3%]  p-10 text-black m-auto md:w-[700px] '>
-          <p className='Rajdhani font-bold text-3xl'>Welcome to ThreatSenseAI</p>
-          <p className='p-2 Rajdhani'>ahjkhsoiajsdjnasdlhlais dauby ak hxku asugxukxgasg b</p>
-      </div>
-    
+        <div className=" ml-[3%]  p-10 text-black m-auto md:w-[700px] ">
+          <p className="Rajdhani font-bold text-3xl">
+            Welcome to ThreatSenseAI
+          </p>
+          <p className="p-2 Rajdhani">
+            ahjkhsoiajsdjnasdlhlais dauby ak hxku asugxukxgasg b
+          </p>
+        </div>
       </div>
 
       <div
@@ -59,33 +61,58 @@ function Home() {
               }`}
               key={index}
             >
-                          <figure><img src={item.image} alt={item.name}/></figure>
-            <div className={` card-body`}>
-              <h2 className="card-title">{item.name}</h2>
-              <p>{item.description}</p>
-              <div className="card-actions justify-end">
-                <button className="btn btn-primary transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110 duration-250" onClick={onBringGlassInfront}>Learn now!</button>
+              <figure>
+                <img src={item.image} alt={item.name} />
+              </figure>
+              <div className={` card-body`}>
+                <h2 className="card-title">{item.name}</h2>
+                <p>{item.description}</p>
+                <div className="card-actions justify-end">
+                  <button
+                    className="btn btn-primary transition ease-in-out delay-200 hover:-translate-y-1 hover:scale-110 duration-250"
+                    onClick={onBringGlassInfront}
+                  >
+                    Learn now!
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
           ))}
         </div>
 
         <div>
           <div className="flex justify-center mb-[4%]">
-            <div className={`${fade === true ? "" : "hidden"} card w-[65%] glass`}>
+            <div
+              className={`${fade === true ? "" : "hidden"} card w-[65%] glass`}
+            >
               <div className="card-body">
-           <div className="flex justify-end">
-           <button type="button" className="glass rounded-2xl  inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none " onClick={onBringGlassInfront} >
-               <span className="sr-only">Close menu</span>
-               <svg className="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-               </svg>
-             </button>
-           </div>
-             <h2 className="card-title">Life hack</h2>
-             <p>How to park your car at your garage?</p>
-           </div>
+                <div className="flex justify-end">
+                  <button
+                    type="button"
+                    className="glass rounded-2xl  inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none "
+                    onClick={onBringGlassInfront}
+                  >
+                    <span className="sr-only">Close menu</span>
+                    <svg
+                      className="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <h2 className="card-title">Life hack</h2>
+                <p>How to park your car at your garage?</p>
+              </div>
             </div>
           </div>
         </div>
