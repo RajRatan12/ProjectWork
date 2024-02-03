@@ -1,31 +1,11 @@
-import { ProfileCardData } from "../Data/ProfileCardData";
-import ProfileCards from "../Cards/ProfileCards";
-import Aboutimg3 from '../../Assets/Aboutimg3.jpg'
+import React from 'react'
 
 const About = () => {
   return (
-    <div className="space-y-6 md:space-y-0" style={{ 
-      backgroundImage: `url(${Aboutimg3})`,
-      backgroundSize: 'cover',  
-      backgroundRepeat: 'no-repeat',  
-      backgroundPosition: 'center center',  
-    }}>
-      <div className="flex flex-wrap justify-center space-y-12 md:space-y-0 md:space-x-[5rem]">
-        {ProfileCardData.slice(0, 3).map((profile, index) => (
-          <div key={index} className=" w-full md:w-1/3 lg:w-1/4 xl:w-1/5">
-            <ProfileCards {...profile} />
-          </div>
-        ))}
-      </div>
-      <div className="flex flex-wrap justify-center space-y-12 md:space-y-0 md:space-x-[5rem]">
-        {ProfileCardData.slice(3, 5).map((profile, index) => (
-          <div key={index} className="w-full md:w-1/3 lg:w-1/4 xl:w-1/5">
-            <ProfileCards {...profile} />
-          </div>
-        ))}
-      </div>
+    <div>
+      <p className='flex justify-center text-3xl text-red-700'>This is about the project page</p>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
