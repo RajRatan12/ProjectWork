@@ -3,7 +3,7 @@ import {useState} from "react";
 import { FaMapSigns } from "react-icons/fa";
 import { BsFillTelephoneFill, BsGlobeAmericas } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
-
+import axios from "axios";
 const FooterContact =()=>{
 
   const [name,setName]=useState("");
@@ -27,6 +27,22 @@ const FooterContact =()=>{
     setMessage(value);
     // console.log(message)
   }
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    try{
+      alert("Submitted")
+      await axios.post("http://localhost:8000/api/v1/users/register",{
+        name:name,
+        email:email,
+        message:message
+      })
+    }
+    catch(e){
+      console.log("Error sending frontEnd data to backend using POST API : ",e)
+    }
+  };
+
   const formTab = [
     { 
       title:"Name",
@@ -102,7 +118,7 @@ const FooterContact =()=>{
         <div className={` w-[100%] h-screen flex-col flex  mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg`} >
       <div className=" container mx-auto  flex flex-wrap shadow-2xl my-20 rounded-md p-5">
         <div className="lg:w-1/2 w-full p-4">
-          <form className="  shadow-lg rounded-md px-2 pt-6 pb-8 mb-4">
+          <form action="POST" className="  shadow-lg rounded-md px-2 pt-6 pb-8 mb-4">
             <div className="flex  flex-col">
               {formTab.map((x, index) => {
                 return (
@@ -130,7 +146,7 @@ const FooterContact =()=>{
                     );
                   })}
               <div className="w-full my-4 flex justify-end ">
-                <button className="btn rounded-full w-full">
+                <button className="btn rounded-full w-full" onClick={handleSubmit}>
                   Send Message
                 </button>
               </div>
