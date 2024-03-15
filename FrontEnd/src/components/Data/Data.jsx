@@ -24,11 +24,11 @@ export const data = [
       // price: "$$",
     },
     {
-      id: 4,
-      name: "Cyclone",
-      description: "cyclone",
-      image:
-        "https://images.pexels.com/photos/5681374/pexels-photo-5681374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      // price: "$$$",
+      // id: 4,
+      // name: "Cyclone",
+      // description: "cyclone",
+      // image:
+      //   "https://images.pexels.com/photos/5681374/pexels-photo-5681374.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      // // price: "$$$",
     },
   ];
