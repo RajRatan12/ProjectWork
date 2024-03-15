@@ -1,11 +1,11 @@
 import React from 'react'
-
+import video1 from '../../Assets/video1.mp4'
 const About = () => {
   return (
     <div>
-      <div className="max-w-[1200px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4">
+      <div className="max-w-[1200px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-10">
       {/* Left Side */}
-      <div className="grid grid-cols-2 h-[100vh] grid-rows-3">
+      <div className="grid grid-cols-2 h-[90vh] grid-rows-3">
         <img
           className="row-span-2 p-2 w-full h-full object-cover"
           src="https://images.pexels.com/photos/11518764/pexels-photo-11518764.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -35,15 +35,27 @@ const About = () => {
 
       {/* Right Side */}
 
-      <div className="flex flex-col justify-center">
+      <div className=" flex flex-col justify-center items-center">
         <p className="font-bold text-5xl md:text-5xl font-Rajdhani w-full">
           Welcome to ThreatSense AI
         </p>
-        <p className="text-xl py-6 font-Rajdhani">
+        <p className="text-xl py-6 font-Rajdhani flex text-justify">
           Welcome to our Disaster Management System, a cutting-edge application designed to assist in mitigating the impact of natural disasters such as earthquakes, wildfires, and floods. Our system utilizes advanced machine learning algorithms to analyze images and assess the severity of the disaster, as well as identify the type of disaster and the number of individuals affected.
         </p>
       </div>
     </div>
+    <div className="absolute top-0 left-0 w-[100%] h-[100%] ">
+      </div>{" "}
+      <div className="absolute m-0 p-0 w-[100%] h-[100vh]">
+        <video
+          src={video1}
+          autoPlay
+          loop
+          muted
+          className="w-[100%] h-[100%] object-cover"
+        ></video>{" "}
+      </div>{" "}
+      <p className='text-4xl '>Hello</p>
     </div>
   )
 }
