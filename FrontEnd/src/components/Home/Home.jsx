@@ -24,7 +24,7 @@ export function useIsVisible(ref) {
 }
 
 function Home() {
-  const refs = Array.from({ length: 4 }, () => useRef());
+  const refs = Array.from({ length: 3 }, () => useRef());
   const isVisible = refs.map((ref) => useIsVisible(ref));
   const [fade, setFade] = useState(false);
 
@@ -52,7 +52,7 @@ function Home() {
         className=" w-[100%]  flex-col flex justify-center mx-auto max-w-full bg-cover bg-fixed bg-center bg-no-repeat shadow-lg"
         style={{ backgroundImage: `url(${pexels})` }}
       >
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 m-auto gap-x-5 gap-y-5 mt-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 m-auto gap-x-5 gap-y-5 mt-8 p-3 ml-3 mr-3">
           {data.map((item, index) => (
             <div
               ref={refs[index]}
