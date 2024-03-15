@@ -1,12 +1,12 @@
 
 import { ProfileCardData } from "../Data/ProfileCardData";
 import ProfileCards from "../Cards/ProfileCards";
-import Aboutimg3 from '../../Assets/Aboutimg3.jpg'
+// import Aboutimg3 from '../../Assets/pexels-daniel-absi-952670.jpg'
 
 const footerKnowTheTeam = () => {
   return (
     <div className="space-y-6 md:space-y-0" style={{ 
-      backgroundImage: `url(${Aboutimg3})`,
+      // backgroundImage: `url(${Aboutimg3})`,
       backgroundSize: 'cover',  
       backgroundRepeat: 'no-repeat',  
       backgroundPosition: 'center center',  
