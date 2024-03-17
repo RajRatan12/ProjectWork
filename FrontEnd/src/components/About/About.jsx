@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 // import videobg from '../../Assets/videobg.mp4'
 const About = () => {
   return (
@@ -28,15 +27,6 @@ const About = () => {
       <div className="max-w-[1200px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-10">
       {/* Left Side */}
       <div className="grid grid-cols-2 h-[90vh] grid-rows-3">
-=======
-
-const About = () => {
-  return (
-    <div>
-      <div className="max-w-[1200px] m-auto py-16 px-4 grid lg:grid-cols-2 gap-4">
-      {/* Left Side */}
-      <div className="grid grid-cols-2 h-[100vh] grid-rows-3">
->>>>>>> 49d62e5252b46f50642ca264969089ff5e3b2b78
         <img
           className="row-span-2 p-2 w-full h-full object-cover"
           src="https://images.pexels.com/photos/11518764/pexels-photo-11518764.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -66,7 +56,6 @@ const About = () => {
 
       {/* Right Side */}
 
-<<<<<<< HEAD
       <div className=" flex flex-col justify-center">
         <p className="font-bold text-5xl md:text-5xl font-Rajdhani w-full py-3">
           Welcome to ThreatSense AI
@@ -93,15 +82,6 @@ const About = () => {
             </p>
           </div>
         </div>
-=======
-      <div className="flex flex-col justify-center">
-        <p className="font-bold text-5xl md:text-5xl font-Rajdhani w-full">
-          Welcome to ThreatSense AI
-        </p>
-        <p className="text-xl py-6 font-Rajdhani">
-          Welcome to our Disaster Management System, a cutting-edge application designed to assist in mitigating the impact of natural disasters such as earthquakes, wildfires, and floods. Our system utilizes advanced machine learning algorithms to analyze images and assess the severity of the disaster, as well as identify the type of disaster and the number of individuals affected.
-        </p>
->>>>>>> 49d62e5252b46f50642ca264969089ff5e3b2b78
       </div>
     </div>
     </div>
