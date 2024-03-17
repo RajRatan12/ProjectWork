@@ -1,5 +1,5 @@
 import React from 'react'
-import video1 from '../../Assets/video1.mp4'
+import videobg from '../../Assets/videobg.mp4'
 const About = () => {
   return (
     <div className=''>
@@ -7,7 +7,7 @@ const About = () => {
       </div>{" "}
       <div className=" m-0 p-0 w-[100%] h-[100vh] ">
         <video
-          src={video1}
+          src={videobg}
           autoPlay
           loop
           muted
