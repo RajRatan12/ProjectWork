@@ -4,7 +4,11 @@ import {GiShieldBash} from "../../Assets/Icons"
 const Header = () => {
   return (
     <div>
+<<<<<<< HEAD
       <div className="navbar backdrop-filter mix-blend-normal bg-opacity-30 absolute z-[3]">
+=======
+      <div className="navbar backdrop-filter mix-blend-normal bg-opacity-30 absolute">
+>>>>>>> 49d62e5252b46f50642ca264969089ff5e3b2b78
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
