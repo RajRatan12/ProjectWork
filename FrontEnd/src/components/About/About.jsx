@@ -55,7 +55,6 @@ const About = () => {
       </div>
 
       {/* Right Side */}
-
       <div className=" flex flex-col justify-center">
         <p className="font-bold text-5xl md:text-5xl font-Rajdhani w-full py-3">
           Welcome to ThreatSense AI
@@ -82,8 +81,27 @@ const About = () => {
             </p>
           </div>
         </div>
+      <div className=" flex flex-col justify-center items-center">
+        <p className="font-bold text-5xl md:text-5xl font-Rajdhani w-full">
+          Welcome to ThreatSense AI
+        </p>
+        <p className="text-xl py-6 font-Rajdhani flex text-justify">
+          Welcome to our Disaster Management System, a cutting-edge application designed to assist in mitigating the impact of natural disasters such as earthquakes, wildfires, and floods. Our system utilizes advanced machine learning algorithms to analyze images and assess the severity of the disaster, as well as identify the type of disaster and the number of individuals affected.
+        </p>
       </div>
     </div>
+    <div className="absolute top-0 left-0 w-[100%] h-[100%] ">
+      </div>{" "}
+      <div className="absolute m-0 p-0 w-[100%] h-[100vh]">
+        <video
+          src={video1}
+          autoPlay
+          loop
+          muted
+          className="w-[100%] h-[100%] object-cover"
+        ></video>{" "}
+      </div>{" "}
+      <p className='text-4xl '>Hello</p>
     </div>
   )
 }
