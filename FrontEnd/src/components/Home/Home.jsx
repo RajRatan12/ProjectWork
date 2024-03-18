@@ -39,8 +39,8 @@ function Home() {
         style={{ backgroundImage: `url(${Landing_Page1})` }}
       >
         <div className="ml-[3%]  p-10 text-black m-auto md:w-[700px] ">
-          <p className="Rajdhani font-bold text-3xl">Welcome to ThreatSenseAI</p>
-          <p className="p-2 Rajdhani">ahjkhsoiajsdjnasdlhlais dauby ak hxku asugxukxgasg b</p>
+          <p className="font-Rajdhani font-bold text-4xl">Welcome to ThreatSenseAI</p>
+          <p className="py-3 text-l font-Rajdhani">Rapid image analysis for precise disaster detection and immediate alerting.</p>
         </div>
       </div>
 
@@ -106,7 +106,7 @@ function Home() {
                 <div className="">
                 {selectedDisasterIndex !== null && (
                   <div>
-                    <p className='text-5xl text-[#DFF5FF] font-Rajdhani font-bold py-3'>{data[selectedDisasterIndex].name}</p>
+                    <p className='text-5xl text-[#ACE2E1] font-Rajdhani font-bold py-3'>{data[selectedDisasterIndex].name}</p>
                     <ul className='text-xl text-white font-Rajdhani'> {/* Using unordered list (ul) for bullet points */}
                       {data[selectedDisasterIndex].description2.split('.').map((point, index) => (
                         <li key={index}>{point.trim()}</li>
