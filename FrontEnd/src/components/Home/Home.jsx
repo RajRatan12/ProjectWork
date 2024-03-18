@@ -28,7 +28,7 @@ function Home() {
   const [selectedDisasterIndex, setSelectedDisasterIndex] = useState(null);
 
   const onBringGlassInfront = (index) => {
-    setFade(!fade);
+    setFade(true);
     setSelectedDisasterIndex(index);
   };
 
@@ -95,14 +95,26 @@ function Home() {
                     <IoCloseCircleSharp className="h-6 w-6" />
                   </button>
                 </div>
-                <div className="">
+                {/* <div className="">
                   {selectedDisasterIndex !== null && (
                     <div  >
                       <h2  >{data[selectedDisasterIndex].name}</h2>
                       <p>{data[selectedDisasterIndex].description2}</p>
                     </div>
                   )}
-                </div>
+                </div> */}
+                <div className="">
+                {selectedDisasterIndex !== null && (
+                  <div>
+                    <p className='text-5xl text-[#DFF5FF] font-Rajdhani font-bold py-3'>{data[selectedDisasterIndex].name}</p>
+                    <ul className='text-xl text-white font-Rajdhani'> {/* Using unordered list (ul) for bullet points */}
+                      {data[selectedDisasterIndex].description2.split('.').map((point, index) => (
+                        <li key={index}>{point.trim()}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ export const data = [
       id: 1,
       name: "Earthquake",
       description1: "earthquake",
-      description2: "1)Drop to the ground to avoid being knocked over. 2)Take cover under a sturdy piece of furniture or against an interior wall. 3) Hold on until shaking stops to prevent injury. 4) Stay indoors until it's safe to exit, avoiding elevators. If outside, move to an open area away from buildings, trees, and utility wires.  ",
+      description2: "1)Drop to the ground to avoid being knocked over. 2)Take cover under a sturdy piece of furniture or against an interior wall. 3)Hold on until shaking stops to prevent injury. 4)Stay indoors until it's safe to exit, avoiding elevators. 5)If outside, move to an open area away from buildings, trees, and utility wires.  ",
       image:
       "https://images.pexels.com/photos/15803784/pexels-photo-15803784/free-photo-of-ruins-of-buildings-in-city.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       // price: "$$$$",
