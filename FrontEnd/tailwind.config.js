@@ -16,6 +16,8 @@ export default {
         twitterColor:"#1DA1F2",
         githubColor:"#2b3137",
         linkedinColor:"#0A66C2",
+        lightGreen:"#F1FADA",
+        darkGreen:"#9AD0C2",
       }
     },
     screens: {

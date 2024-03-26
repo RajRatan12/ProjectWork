@@ -1,7 +1,6 @@
- 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios';
-
+import Loader from '../Loader/Loader';
 const Services = () => {
   const [imageFile, setImageFile] = useState(null);
   const [classificationResult, setClassificationResult] = useState(null);
@@ -11,6 +10,14 @@ const Services = () => {
   const [imageClassified, setImageClassified] = useState(false);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulating data fetching or component loading delay
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -59,6 +66,7 @@ const Services = () => {
     setImageClassified(false);
     setShowConfirmationModal(false);
     setError(null);
+    document.getElementById('file-input').value = '';
   };
 
   const downloadResult = () => {
@@ -76,13 +84,18 @@ const Services = () => {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center h-screen bg-gradient-to-r from-purple-200 to-pink-200'>
-      <div className='max-w-md p-8 bg-white rounded-lg shadow-lg'>
-        <h1 className='text-3xl font-bold mb-6 text-center text-purple-800'>Image Classification Service</h1>
-        <input type="file" onChange={handleImageChange} className='border border-gray-300 p-2 rounded-md mb-4' />
+    <div>
+    {isLoading ? (
+      <Loader/>
+      ):(
+    <div className='flex flex-col items-center bg-gradient-to-tr from-darkGreen to-lightGreen justify-center min-h-screen p-[4rem]'>
+      <div className='w-[60%] md:p-12 bg-white rounded-lg shadow-xl'>
+        <h1 className='text-4xl font-bold mb-6 text-center text-[#2D9596] font-Rajdhani'>Image Classification Service</h1>
+        <input type="file" id='file-input' onChange={handleImageChange} className="file-input file-input-bordered file-input-success rounded-md mb-4 w-full max-w-xs" />
+        {/* <input type="file" onChange={handleImageChange} className='border border-gray-300 p-2 rounded-md mb-4' /> */}
         {imagePreview && <img src={imagePreview} alt="Preview" className="mb-4 max-w-full" />}
-        <div className="relative mb-4">
-          <button onClick={handleSubmit} disabled={!imageFile || loading} className={`bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded shadow-md ${(!imageFile || loading) && 'opacity-50 cursor-not-allowed'}`}>
+        <div className="relative mb-4 ">
+          <button onClick={handleSubmit} disabled={!imageFile || loading} className={`btn btn-outline btn-success py-2 px-4 font-Rajdhani rounded shadow-md ${(!imageFile || loading) && 'opacity-50 cursor-not-allowed'}`}>
             {loading ? 'Classifying...' : 'Classify Image'}
           </button>
           {loading && (
@@ -99,21 +112,21 @@ const Services = () => {
         )}
         {classificationResult && (
           <div className='bg-green-100 p-4 rounded-md mt-4'>
-            <p className='text-lg font-semibold text-green-800'>Classification Result:</p>
-            <p className='mt-2 text-green-700'>The image is classified as: {classificationResult.label}</p>
+            <p className='text-xl font-semibold text-green-800  font-Rajdhani'>Classification Result:</p>
+            <p className='mt-2 text-green-700 text-lg font-Rajdhani'>The image is classified as:<span className='text-black text-transform: capitalize'> {classificationResult.label} </span></p>
             {classificationResult.probability && (
               <p className='mt-2 text-gray-700'>Probability: {Math.round(classificationResult.probability * 100)}%</p>
             )}
             {classificationResult.dimensions && (
               <p className='mt-2 text-gray-700'>Dimensions: {classificationResult.dimensions.width} x {classificationResult.dimensions.height}</p>
             )}
-            <button onClick={downloadResult} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded shadow-md mt-2">
+            <button onClick={downloadResult} className="btn btn-outline btn-info py-2 px-4 rounded shadow-md mt-2 font-Rajdhani">
               Download Result
             </button>
           </div>
         )}
         {imageClassified && (
-          <button onClick={() => setShowConfirmationModal(true)} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow-md mt-4">
+          <button onClick={() => setShowConfirmationModal(true)} className="bg-red-500 hover:bg-red-700 text-white font-Rajdhani font-bold py-2 px-4 rounded shadow-md mt-4">
             Clear Image
           </button>
         )}
@@ -156,10 +169,9 @@ const Services = () => {
         )}
       </div>
     </div>
+    )}
+    </div>
   );
 };
 
 export default Services;
-
-
- 
