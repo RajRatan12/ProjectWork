@@ -88,6 +88,17 @@ const Services = () => {
     }
   };
 
+
+  const calculateSeverity = (count) => {
+    if (count <= 3) {
+      return 'Low';
+    } else if (count <= 6) {
+      return 'Medium';
+    } else {
+      return 'High';
+    }
+  };
+  
   return (
     <div>
     {isLoading ? (
@@ -116,23 +127,31 @@ const Services = () => {
           </div>
         )}
         {classificationResult && (
-          <div className='bg-green-100 p-4 rounded-md mt-4'>
-            <p className='text-xl font-semibold text-green-800  font-Rajdhani'>Classification Result:</p>
-            <p className='mt-2 text-green-700 text-lg font-Rajdhani'>The image is classified as:<span className='text-black text-transform: capitalize'> {classificationResult.label} </span></p>
-            {classificationResult.probability && (
-              <p className='mt-2 text-gray-700'>Probability: {Math.round(classificationResult.probability * 100)}%</p>
-            )}
-            {classificationResult.dimensions && (
-              <p className='mt-2 text-gray-700'>Dimensions: {classificationResult.dimensions.width} x {classificationResult.dimensions.height}</p>
-            )}
-            {personCount.data && (
-              <p className='mt-2 text-gray-700'>{personCount.data}</p>
-            )}
-            <button onClick={downloadResult} className="btn btn-outline btn-info py-2 px-4 rounded shadow-md mt-2 font-Rajdhani">
-              Download Result
-            </button>
-          </div>
-        )}
+  <div className='bg-green-100 p-4 rounded-md mt-4'>
+    <p className='text-xl font-semibold text-green-800 font-Rajdhani'>Classification Result:</p>
+    <p className='mt-2 text-green-700 text-lg font-Rajdhani'>The image is classified as:<span className='text-black text-transform: capitalize'> {classificationResult.label} </span></p>
+    {classificationResult.probability && (
+      <p className='mt-2 text-gray-700'>Probability: {Math.round(classificationResult.probability * 100)}%</p>
+    )}
+    {classificationResult.dimensions && (
+      <p className='mt-2 text-gray-700'>Dimensions: {classificationResult.dimensions.width} x {classificationResult.dimensions.height}</p>
+    )}
+    {personCount && (
+      <p className='mt-2 text-gray-700'>Number of people: {personCount.count}</p>
+    )}
+
+    {personCount && (
+  <div className="mt-2 text-gray-700">
+   
+    <p>Severity Range: {calculateSeverity(personCount.count)}</p>
+  </div>
+)}
+    <button onClick={downloadResult} className="btn btn-outline btn-info py-2 px-4 rounded shadow-md mt-2 font-Rajdhani">
+      Download Result
+    </button>
+  </div>
+)}
+
         {imageClassified && (
           <button onClick={() => setShowConfirmationModal(true)} className="bg-red-500 hover:bg-red-700 text-white font-Rajdhani font-bold py-2 px-4 rounded shadow-md mt-4">
             Clear Image
@@ -183,3 +202,11 @@ const Services = () => {
 };
 
 export default Services;
+
+
+
+
+
+
+
+
