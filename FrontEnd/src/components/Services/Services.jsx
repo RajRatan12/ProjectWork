@@ -11,6 +11,7 @@ const Services = () => {
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
+  const [personCount, setPersonCount] = useState(0);
 
   useEffect(() => {
     // Simulating data fetching or component loading delay
@@ -47,6 +48,9 @@ const Services = () => {
         }
       };
       const response = await axios.post('http://localhost:9000/classify', formData, config);
+      const responsePersonCount = await axios.post('http://localhost:9001/personCount', formData, config);
+      setPersonCount(responsePersonCount.data);
+      console.log(responsePersonCount);
       setClassificationResult(response.data);
       setError(null);
       setImageClassified(true);
@@ -66,6 +70,7 @@ const Services = () => {
     setImageClassified(false);
     setShowConfirmationModal(false);
     setError(null);
+    setPersonCount(0);
     document.getElementById('file-input').value = '';
   };
 
@@ -119,6 +124,9 @@ const Services = () => {
             )}
             {classificationResult.dimensions && (
               <p className='mt-2 text-gray-700'>Dimensions: {classificationResult.dimensions.width} x {classificationResult.dimensions.height}</p>
+            )}
+            {personCount.data && (
+              <p className='mt-2 text-gray-700'>{personCount.data}</p>
             )}
             <button onClick={downloadResult} className="btn btn-outline btn-info py-2 px-4 rounded shadow-md mt-2 font-Rajdhani">
               Download Result
