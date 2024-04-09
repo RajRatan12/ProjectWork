@@ -169,9 +169,9 @@ const Services = () => {
                     {classificationResult.dimensions.height}
                   </p>
                 )}
-                 
-
-                 
+                {personCount && (
+                  <p className='mt-2 text-gray-700'>Number of people: {personCount.count}</p>
+                )}
                 <button
                   onClick={downloadResult}
                   className="btn btn-outline btn-info mt-2 rounded px-4 py-2 font-Rajdhani shadow-md"

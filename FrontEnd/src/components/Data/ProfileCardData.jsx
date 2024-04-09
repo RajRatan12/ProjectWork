@@ -3,6 +3,7 @@ import RajRatan from "../../Assets/RajRatan.png"
 import UnnatiSingh from "../../Assets/UnnatiSingh.png"
 import HarshitSinghania from "../../Assets/HarshitShinghania.png"
 import RohanGanguly from "../../Assets/RohanGanguly.png"
+import RajdeepChatterjee from "../../Assets/RajdeepChatterjee.jpeg"
 
 export const ProfileCardData = [
     {
@@ -53,6 +54,16 @@ export const ProfileCardData = [
         twitter:"https://x.com/harrrrshhhhh?t=6v7JnahdfOFBdFHzqPV56w&s=09",
         linkedin:"www.linkedin.com/in/h-singhania",
         github:"https://github.com/harshit-singhania",
+        post:"",
+      },
+      {
+        id: 6,
+        name: "Dr. Rajdeep Chatterjee",
+        description: "Rajdeep Chatterjee,a professional in CSE. With a Bachelor's degree from The University of Burdwan, he specializes in Brain-Computer Interface,ML,DL,and Computer Vision. Rajdeep is also a respected reviewer for prestigious journals such as IEEE Transactions on Biomedical Engineering and Computers in Biology and Medicine.",
+        image:RajdeepChatterjee,
+        twitter:"",
+        linkedin:"",
+        github:"",
         post:"",
       },
   ];
