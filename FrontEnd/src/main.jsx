@@ -6,6 +6,9 @@ import { createBrowserRouter,createRoutesFromElements,Route, RouterProvider } fr
 
 import {Home,About,Services,FooterContact,FooterKnowTheTeam,FooterReference} from "./components/index.jsx"
 
+import { ThemeProvider } from './components/Buttons/ThemeContext.jsx';
+
+
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />} >
@@ -21,6 +24,8 @@ const router=createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+  <ThemeProvider>
     <RouterProvider router={router}/>
+  </ThemeProvider>
   </React.StrictMode>,
 )
